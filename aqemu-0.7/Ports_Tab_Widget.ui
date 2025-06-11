@@ -1,0 +1,744 @@
+<ui version="4.0" >
+ <author>Andrey Rijov</author>
+ <class>Ports_Tab_Widget</class>
+ <widget class="QWidget" name="Ports_Tab_Widget" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>471</width>
+    <height>380</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Ports</string>
+  </property>
+  <layout class="QGridLayout" >
+   <property name="margin" >
+    <number>9</number>
+   </property>
+   <property name="spacing" >
+    <number>6</number>
+   </property>
+   <item row="0" column="0" >
+    <widget class="QTabWidget" name="tabWidget" >
+     <property name="currentIndex" >
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="Tab_Serial_Port" >
+      <attribute name="title" >
+       <string>&amp;Serial Port</string>
+      </attribute>
+      <layout class="QGridLayout" >
+       <property name="margin" >
+        <number>9</number>
+       </property>
+       <property name="spacing" >
+        <number>6</number>
+       </property>
+       <item row="7" column="0" colspan="5" >
+        <spacer>
+         <property name="orientation" >
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" >
+          <size>
+           <width>431</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="5" column="0" >
+        <widget class="QRadioButton" name="RB_Serial_UDP" >
+         <property name="text" >
+          <string>UDP</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0" >
+        <widget class="QRadioButton" name="RB_Serial_Unix" >
+         <property name="text" >
+          <string>Unix</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0" >
+        <widget class="QRadioButton" name="RB_Serial_File" >
+         <property name="text" >
+          <string>File</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" >
+        <widget class="QRadioButton" name="RB_Serial_Dev" >
+         <property name="text" >
+          <string>/dev/</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" >
+        <widget class="QRadioButton" name="RB_Serial_Default" >
+         <property name="text" >
+          <string>Default</string>
+         </property>
+         <property name="checked" >
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="4" >
+        <widget class="QRadioButton" name="RB_Serial_stdio" >
+         <property name="text" >
+          <string>stdio</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="4" >
+        <widget class="QRadioButton" name="RB_Serial_none" >
+         <property name="text" >
+          <string>none</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="4" >
+        <widget class="QRadioButton" name="RB_Serial_Pipe" >
+         <property name="text" >
+          <string>Pipe</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="2" >
+        <widget class="QRadioButton" name="RB_Serial_TCP" >
+         <property name="text" >
+          <string>TCP</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2" >
+        <widget class="QRadioButton" name="RB_Serial_pty" >
+         <property name="text" >
+          <string>pty (Pseudo TTY)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="2" >
+        <widget class="QRadioButton" name="RB_Serial_Host_Port" >
+         <property name="text" >
+          <string>Host Port</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" colspan="5" >
+        <widget class="QLabel" name="Label_Serial_Port" >
+         <property name="sizePolicy" >
+          <sizepolicy>
+           <hsizetype>5</hsizetype>
+           <vsizetype>5</vsizetype>
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text" >
+          <string>Select redirect virtual serial port to:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0" colspan="5" >
+        <layout class="QGridLayout" >
+         <property name="margin" >
+          <number>0</number>
+         </property>
+         <property name="spacing" >
+          <number>6</number>
+         </property>
+         <item row="1" column="0" >
+          <widget class="QLineEdit" name="Edit_Serial_Other" />
+         </item>
+         <item row="1" column="1" >
+          <widget class="QToolButton" name="TB_Serial_Other" >
+           <property name="text" >
+            <string>...</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" >
+          <widget class="QLabel" name="Label_Serial_Args" >
+           <property name="text" >
+            <string>Additional QEMU Arguments:</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="3" column="4" >
+        <widget class="QRadioButton" name="RB_Serial_Telnet" >
+         <property name="text" >
+          <string>Telnet</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2" >
+        <widget class="QRadioButton" name="RB_Serial_null" >
+         <property name="text" >
+          <string>null (/dev/null)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2" >
+        <widget class="QRadioButton" name="RB_Serial_vc" >
+         <property name="text" >
+          <string>vc (Virtual console)</string>
+         </property>
+        </widget>
+       </item>
+       <item rowspan="5" row="1" column="1" >
+        <spacer>
+         <property name="orientation" >
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" >
+          <size>
+           <width>40</width>
+           <height>121</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item rowspan="5" row="1" column="3" >
+        <spacer>
+         <property name="orientation" >
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" >
+          <size>
+           <width>21</width>
+           <height>131</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="Tab_Parallel_Port" >
+      <attribute name="title" >
+       <string>Para&amp;llel Port</string>
+      </attribute>
+      <layout class="QGridLayout" >
+       <property name="margin" >
+        <number>9</number>
+       </property>
+       <property name="spacing" >
+        <number>6</number>
+       </property>
+       <item rowspan="5" row="1" column="3" >
+        <spacer>
+         <property name="orientation" >
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" >
+          <size>
+           <width>40</width>
+           <height>131</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item rowspan="5" row="1" column="1" >
+        <spacer>
+         <property name="orientation" >
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" >
+          <size>
+           <width>40</width>
+           <height>131</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="7" column="2" >
+        <spacer>
+         <property name="orientation" >
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" >
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="0" colspan="5" >
+        <widget class="QLabel" name="Label_Parallel_Port" >
+         <property name="sizePolicy" >
+          <sizepolicy>
+           <hsizetype>5</hsizetype>
+           <vsizetype>5</vsizetype>
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text" >
+          <string>Select redirect virtual parallel port to:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0" colspan="5" >
+        <layout class="QGridLayout" >
+         <property name="margin" >
+          <number>0</number>
+         </property>
+         <property name="spacing" >
+          <number>6</number>
+         </property>
+         <item row="1" column="1" >
+          <widget class="QToolButton" name="TB_Parallel_Other" >
+           <property name="text" >
+            <string>...</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" >
+          <widget class="QLabel" name="Label_Parallel_Args" >
+           <property name="text" >
+            <string>Additional QEMU Arguments:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" >
+          <widget class="QLineEdit" name="Edit_Parallel_Other" />
+         </item>
+        </layout>
+       </item>
+       <item row="3" column="4" >
+        <widget class="QRadioButton" name="RB_Parallel_Telnet" >
+         <property name="text" >
+          <string>Telnet</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2" >
+        <widget class="QRadioButton" name="RB_Parallel_vc" >
+         <property name="text" >
+          <string>vc (Virtual console)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2" >
+        <widget class="QRadioButton" name="RB_Parallel_null" >
+         <property name="text" >
+          <string>null (/dev/null)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2" >
+        <widget class="QRadioButton" name="RB_Parallel_pty" >
+         <property name="text" >
+          <string>pty (Pseudo TTY)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="2" >
+        <widget class="QRadioButton" name="RB_Parallel_Host_Port" >
+         <property name="text" >
+          <string>Host Port</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="2" >
+        <widget class="QRadioButton" name="RB_Parallel_TCP" >
+         <property name="text" >
+          <string>TCP</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="4" >
+        <widget class="QRadioButton" name="RB_Parallel_Pipe" >
+         <property name="text" >
+          <string>Pipe</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="4" >
+        <widget class="QRadioButton" name="RB_Parallel_none" >
+         <property name="text" >
+          <string>none</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="4" >
+        <widget class="QRadioButton" name="RB_Parallel_stdio" >
+         <property name="text" >
+          <string>stdio</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" >
+        <widget class="QRadioButton" name="RB_Parallel_Default" >
+         <property name="text" >
+          <string>Default</string>
+         </property>
+         <property name="checked" >
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" >
+        <widget class="QRadioButton" name="RB_Parallel_Dev" >
+         <property name="text" >
+          <string>/dev/</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0" >
+        <widget class="QRadioButton" name="RB_Parallel_File" >
+         <property name="text" >
+          <string>File</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0" >
+        <widget class="QRadioButton" name="RB_Parallel_Unix" >
+         <property name="text" >
+          <string>Unix</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0" >
+        <widget class="QRadioButton" name="RB_Parallel_UDP" >
+         <property name="text" >
+          <string>UDP</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="Tab_USB_Ports" >
+      <attribute name="title" >
+       <string>&amp;USB Ports</string>
+      </attribute>
+      <layout class="QGridLayout" >
+       <property name="margin" >
+        <number>9</number>
+       </property>
+       <property name="spacing" >
+        <number>6</number>
+       </property>
+       <item row="2" column="0" >
+        <spacer>
+         <property name="orientation" >
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" >
+          <size>
+           <width>431</width>
+           <height>16</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="0" column="0" >
+        <widget class="QCheckBox" name="CH_USB_Hub" >
+         <property name="text" >
+          <string>Enable VM USB Controller</string>
+         </property>
+         <property name="checked" >
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" >
+        <layout class="QGridLayout" >
+         <property name="margin" >
+          <number>0</number>
+         </property>
+         <property name="spacing" >
+          <number>6</number>
+         </property>
+         <item row="2" column="3" >
+          <widget class="QPushButton" name="Button_Clear_VM_USB_List" >
+           <property name="text" >
+            <string>Clear VM USB</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2" >
+          <widget class="QPushButton" name="Button_Update_Host_USB" >
+           <property name="text" >
+            <string>Update USB Host List</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0" colspan="4" >
+          <widget class="QTableWidget" name="Table_VM_USB" >
+           <property name="editTriggers" >
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
+           <property name="selectionMode" >
+            <enum>QAbstractItemView::SingleSelection</enum>
+           </property>
+           <property name="selectionBehavior" >
+            <enum>QAbstractItemView::SelectRows</enum>
+           </property>
+           <property name="verticalScrollMode" >
+            <enum>QAbstractItemView::ScrollPerPixel</enum>
+           </property>
+           <property name="horizontalScrollMode" >
+            <enum>QAbstractItemView::ScrollPerPixel</enum>
+           </property>
+           <column>
+            <property name="text" >
+             <string>Manufacturer:</string>
+            </property>
+           </column>
+           <column>
+            <property name="text" >
+             <string>Product:</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+         <item row="3" column="0" colspan="2" >
+          <widget class="QLabel" name="Label_VM_USB_Devices" >
+           <property name="text" >
+            <string>Virtual Machine USB Devices:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0" colspan="2" >
+          <widget class="QLabel" name="Label_Host_USB_Devices" >
+           <property name="text" >
+            <string>Host USB Devices:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0" >
+          <widget class="QPushButton" name="Button_Add_USB_Device" >
+           <property name="text" >
+            <string>Add To VM</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0" colspan="4" >
+          <widget class="QTableWidget" name="Table_Host_USB" >
+           <property name="editTriggers" >
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
+           <property name="selectionMode" >
+            <enum>QAbstractItemView::SingleSelection</enum>
+           </property>
+           <property name="selectionBehavior" >
+            <enum>QAbstractItemView::SelectRows</enum>
+           </property>
+           <property name="verticalScrollMode" >
+            <enum>QAbstractItemView::ScrollPerPixel</enum>
+           </property>
+           <property name="horizontalScrollMode" >
+            <enum>QAbstractItemView::ScrollPerPixel</enum>
+           </property>
+           <column>
+            <property name="text" >
+             <string>Manufacturer:</string>
+            </property>
+           </column>
+           <column>
+            <property name="text" >
+             <string>Product:</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+         <item row="2" column="1" >
+          <widget class="QPushButton" name="Button_Delete_USB_Device" >
+           <property name="text" >
+            <string>Delete From VM</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>RB_Serial_Default</tabstop>
+  <tabstop>RB_Serial_Dev</tabstop>
+  <tabstop>RB_Serial_File</tabstop>
+  <tabstop>RB_Serial_Unix</tabstop>
+  <tabstop>RB_Serial_UDP</tabstop>
+  <tabstop>RB_Serial_vc</tabstop>
+  <tabstop>RB_Serial_null</tabstop>
+  <tabstop>RB_Serial_pty</tabstop>
+  <tabstop>RB_Serial_Host_Port</tabstop>
+  <tabstop>RB_Serial_TCP</tabstop>
+  <tabstop>RB_Serial_stdio</tabstop>
+  <tabstop>RB_Serial_none</tabstop>
+  <tabstop>RB_Serial_Telnet</tabstop>
+  <tabstop>RB_Serial_Pipe</tabstop>
+  <tabstop>Edit_Serial_Other</tabstop>
+  <tabstop>TB_Serial_Other</tabstop>
+  <tabstop>RB_Parallel_Default</tabstop>
+  <tabstop>RB_Parallel_Dev</tabstop>
+  <tabstop>RB_Parallel_File</tabstop>
+  <tabstop>RB_Parallel_Unix</tabstop>
+  <tabstop>RB_Parallel_UDP</tabstop>
+  <tabstop>RB_Parallel_vc</tabstop>
+  <tabstop>RB_Parallel_null</tabstop>
+  <tabstop>RB_Parallel_pty</tabstop>
+  <tabstop>RB_Parallel_Host_Port</tabstop>
+  <tabstop>RB_Parallel_TCP</tabstop>
+  <tabstop>RB_Parallel_stdio</tabstop>
+  <tabstop>RB_Parallel_none</tabstop>
+  <tabstop>RB_Parallel_Telnet</tabstop>
+  <tabstop>RB_Parallel_Pipe</tabstop>
+  <tabstop>Edit_Parallel_Other</tabstop>
+  <tabstop>TB_Parallel_Other</tabstop>
+  <tabstop>CH_USB_Hub</tabstop>
+  <tabstop>Table_Host_USB</tabstop>
+  <tabstop>Button_Add_USB_Device</tabstop>
+  <tabstop>Button_Delete_USB_Device</tabstop>
+  <tabstop>Button_Update_Host_USB</tabstop>
+  <tabstop>Button_Clear_VM_USB_List</tabstop>
+  <tabstop>Table_VM_USB</tabstop>
+ </tabstops>
+ <includes/>
+ <resources>
+  <include location="aqemu_images.qrc" />
+ </resources>
+ <connections>
+  <connection>
+   <sender>CH_USB_Hub</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>Button_Delete_USB_Device</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>111</x>
+     <y>56</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>110</x>
+     <y>216</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH_USB_Hub</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>Button_Update_Host_USB</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>163</x>
+     <y>51</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>235</x>
+     <y>211</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH_USB_Hub</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>Button_Clear_VM_USB_List</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>215</x>
+     <y>54</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>405</x>
+     <y>211</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH_USB_Hub</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>Button_Add_USB_Device</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>84</x>
+     <y>52</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>65</x>
+     <y>213</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH_USB_Hub</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>Label_VM_USB_Devices</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>259</x>
+     <y>49</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>158</x>
+     <y>238</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH_USB_Hub</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>Label_Host_USB_Devices</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>104</x>
+     <y>55</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>33</x>
+     <y>82</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH_USB_Hub</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>Table_Host_USB</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>152</x>
+     <y>55</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>51</x>
+     <y>120</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CH_USB_Hub</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>Table_VM_USB</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>288</x>
+     <y>57</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>235</x>
+     <y>272</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,6 @@
+?package(aqemu): \
+  needs="x11" \
+  hints="QEMU,Emulator,Virtual" \
+  section="Apps/Emulators" \
+  title="AQEMU" \
+  longtitle="Front-end for QEMU" \

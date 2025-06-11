@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=AQEMU
+Comment=Manage virtual machine configurations
+Exec=aqemu
+Terminal=false
+Type=Application
+Icon=aqemu_48x48.png
+StartupNotify=true
+Categories=Application;Emulator;Utility

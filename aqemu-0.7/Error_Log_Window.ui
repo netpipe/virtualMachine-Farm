@@ -1,0 +1,98 @@
+<ui version="4.0" >
+ <author>Andrey Rijov</author>
+ <class>Error_Log_Window</class>
+ <widget class="QDialog" name="Error_Log_Window" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>457</width>
+    <height>241</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>QEMU Error Log</string>
+  </property>
+  <layout class="QGridLayout" >
+   <property name="margin" >
+    <number>9</number>
+   </property>
+   <property name="spacing" >
+    <number>6</number>
+   </property>
+   <item row="1" column="1" >
+    <spacer>
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" >
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="0" colspan="3" >
+    <widget class="QTextEdit" name="Edit_Log" >
+     <property name="verticalScrollBarPolicy" >
+      <enum>Qt::ScrollBarAlwaysOn</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy" >
+      <enum>Qt::ScrollBarAlwaysOn</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" >
+    <widget class="QPushButton" name="Button_Clear_Log" >
+     <property name="text" >
+      <string>&amp;Clear</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2" >
+    <widget class="QPushButton" name="Button_Hide" >
+     <property name="text" >
+      <string>&amp;Hide</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <includes/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>Button_Clear_Log</sender>
+   <signal>clicked()</signal>
+   <receiver>Edit_Log</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>46</x>
+     <y>218</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>228</x>
+     <y>103</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Button_Hide</sender>
+   <signal>clicked()</signal>
+   <receiver>Error_Log_Window</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>410</x>
+     <y>218</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>228</x>
+     <y>120</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
